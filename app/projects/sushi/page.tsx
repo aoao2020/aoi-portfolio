@@ -28,7 +28,7 @@ export default function Sushi() {
           <span className="ml-2 hover:underline">戻る</span>
         </Link>
         
-        <h1 className="text-5xl font-bold mb-8 text-blue-800 tracking-tight">寿司打</h1>
+        <h1 className="text-5xl font-bold mb-8 text-blue-800 tracking-tight">お寿司ゲーム（開発中）</h1>
         
         {/* メイン画像 */}
         <div className="mb-16">
@@ -49,9 +49,8 @@ export default function Sushi() {
           <section className="bg-gradient-to-br from-white/80 to-blue-50/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-blue-100">
             <h2 className="text-2xl font-bold mb-4 text-blue-800">概要</h2>
             <p className="text-gray-700 text-lg leading-relaxed">
-              Unityで開発した寿司をテーマにした2Dゲームです。プレイヤーは寿司職人となって、
-              様々な寿司を作っていきます。タイミングよく操作して、美味しい寿司を提供しましょう。
-              スコアを競い合うことで、より楽しくプレイできます。
+              Unityで開発した寿司をテーマにした2Dゲームです。プレイヤーはおちてくるお寿司をキャッチします。
+              キャッチしてはいけないお寿司もあるので気をつけましょう。
             </p>
           </section>
 
@@ -60,7 +59,7 @@ export default function Sushi() {
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
               <li className="flex items-center space-x-2">
                 <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-                <span>様々な種類の寿司作り</span>
+                <span>落ちてくるお寿司をキャッチ</span>
               </li>
               <li className="flex items-center space-x-2">
                 <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
@@ -68,15 +67,15 @@ export default function Sushi() {
               </li>
               <li className="flex items-center space-x-2">
                 <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-                <span>スコアシステム</span>
+                <span>ゲームをクリアするとコインが貯まるシステム（未実装）</span>
               </li>
               <li className="flex items-center space-x-2">
                 <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-                <span>レベルプログレッション</span>
+                <span>貯めたコインでガチャが引ける（未実装）</span>
               </li>
               <li className="flex items-center space-x-2">
                 <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-                <span>効果音とBGM</span>
+                <span>ガチャで新しいお寿司を手にいれる（未実装）</span>
               </li>
             </ul>
           </section>

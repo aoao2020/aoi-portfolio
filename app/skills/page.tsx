@@ -44,18 +44,12 @@ export default function Skills() {
                   <span className="px-4 py-2 bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-800 rounded-xl text-sm font-bold shadow-sm hover:shadow-md transition-all">
                     Swift
                   </span>
-                  <span className="px-4 py-2 bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-800 rounded-xl text-sm font-bold shadow-sm hover:shadow-md transition-all">
-                    UIKit
-                  </span>
-                  <span className="px-4 py-2 bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-800 rounded-xl text-sm font-bold shadow-sm hover:shadow-md transition-all">
-                    SwiftUI
-                  </span>
-                </div>
-                <p className="text-gray-600">
-                  iOSプラットフォームでネイティブアプリケーションを開発。UIKitとSwiftUIの両方を使用した経験があります。
-                </p>
               </div>
-              <div className="space-y-4">
+                <p className="text-gray-600">
+                  iOSプラットフォームでネイティブアプリケーションを開発。
+                  </p>
+              </div>
+              <div className="pace-y-4">
                 <h3 className="text-lg font-semibold text-blue-700">関連スキル</h3>
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-center gap-2">
@@ -90,7 +84,7 @@ export default function Skills() {
                   </span>
                 </div>
                 <p className="text-gray-600">
-                  Unityエンジンを使用した2Dゲームの開発経験があります。ゲームメカニクスの実装からUIデザインまで担当。
+                  Unityエンジンを使用した2Dゲームの開発経験があります。
                 </p>
               </div>
               <div className="space-y-4">

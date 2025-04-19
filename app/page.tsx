@@ -34,8 +34,9 @@ export default function Home() {
                   <span className="block text-2xl text-blue-700 mt-2">iOS & Game Developer</span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  iOSアプリとゲーム開発を専門とするエンジニアです。
-                  使いやすさとエンゲージメントを重視した開発を心がけています。
+                  iOSアプリとゲーム開発をしています
+                  ゲーム開発はUnityを使用しています。自分の描いた絵でゲームを作っています。
+                  このサイトはNext.jsで作成しています。
                 </p>
               </div>
 
@@ -48,13 +49,10 @@ export default function Home() {
               </Link>
 
               <div className="flex flex-wrap gap-3 pt-4">
-                <div className="px-4 py-2 bg-white/60 backdrop-blur-sm rounded-lg border border-blue-100">
-                  <h3 className="text-sm font-semibold text-blue-800 mb-1">場所</h3>
-                  <p className="text-gray-600">東京, 日本</p>
-                </div>
+                
                 <div className="px-4 py-2 bg-white/60 backdrop-blur-sm rounded-lg border border-blue-100">
                   <h3 className="text-sm font-semibold text-blue-800 mb-1">経験</h3>
-                  <p className="text-gray-600">3年</p>
+                  <p className="text-gray-600">実際に開発を始めたのは高校生から</p>
                 </div>
                 <div className="px-4 py-2 bg-white/60 backdrop-blur-sm rounded-lg border border-blue-100">
                   <h3 className="text-sm font-semibold text-blue-800 mb-1">開発分野</h3>
@@ -99,7 +97,7 @@ export default function Home() {
                 </div>
                 <div className="p-8">
                   <h3 className="text-2xl font-bold mb-3 text-blue-800 group-hover:text-blue-600 transition-colors">
-                    シンプルタイマー
+                    タスク達成のためのタイマーアプリ
                   </h3>
                   <p className="text-gray-600 mb-6 line-clamp-3">
                     直感的な操作で使えるシンプルなタイマーアプリです。
@@ -112,9 +110,7 @@ export default function Home() {
                     <span className="px-4 py-1.5 bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-800 rounded-lg text-sm font-bold">
                       iOS
                     </span>
-                    <span className="px-4 py-1.5 bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-800 rounded-lg text-sm font-bold">
-                      UIKit
-                    </span>
+                    
                   </div>
                 </div>
               </div>
@@ -133,11 +129,11 @@ export default function Home() {
                 </div>
                 <div className="p-8">
                   <h3 className="text-2xl font-bold mb-3 text-blue-800 group-hover:text-blue-600 transition-colors">
-                    寿司打
+                    お寿司ゲーム（開発中）
                   </h3>
                   <p className="text-gray-600 mb-6 line-clamp-3">
                     Unityで開発した寿司をテーマにしたゲームです。
-                    プレイヤーは寿司職人となって、様々な寿司を作っていきます。
+                    プレイヤーは落ちてくるお寿司をキャッチします。キャッチしてはいけないお寿司もあるので気をつけましょう
                     タイミングよく操作して、美味しい寿司を提供しましょう。
                   </p>
                   <div className="flex flex-wrap gap-2">

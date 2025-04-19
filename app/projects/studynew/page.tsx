@@ -99,9 +99,7 @@ export default function StudyNew() {
               <span className="px-4 py-2 bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-800 rounded-xl text-sm font-bold shadow-sm hover:shadow-md transition-all">
                 iOS
               </span>
-              <span className="px-4 py-2 bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-800 rounded-xl text-sm font-bold shadow-sm hover:shadow-md transition-all">
-                UIKit
-              </span>
+              
               <span className="px-4 py-2 bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-800 rounded-xl text-sm font-bold shadow-sm hover:shadow-md transition-all">
                 UserDefaults
               </span>
