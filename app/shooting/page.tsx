@@ -103,7 +103,11 @@ export default function Shooting() {
       animationRef.current = requestAnimationFrame(loop);
     };
     animationRef.current = requestAnimationFrame(loop);
-    return () => animationRef.current && cancelAnimationFrame(animationRef.current);
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
   }, [isPlaying, bullets, enemies]);
 
   // ゲーム開始
