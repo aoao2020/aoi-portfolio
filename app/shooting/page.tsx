@@ -22,7 +22,7 @@ export default function Shooting() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [gameOver, setGameOver] = useState(false);
   const gameAreaRef = useRef<HTMLDivElement>(null);
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number | null>(null);
 
   // プレイヤー移動
   const movePlayer = (dir: -1 | 1) => {
@@ -56,36 +56,37 @@ export default function Shooting() {
     if (!isPlaying) return;
     const loop = () => {
       // 弾移動
-      setBullets((prev) => prev.map(b => ({ ...b, y: b.y - BULLET_SPEED })).filter(b => b.y > -BULLET_HEIGHT));
+      setBullets((prevBullets) => prevBullets.map(b => ({ ...b, y: b.y - BULLET_SPEED })).filter(b => b.y > -BULLET_HEIGHT));
       // 敵移動
-      setEnemies((prev) => prev.map(e => ({ ...e, y: e.y + ENEMY_SPEED })).filter(e => e.y < GAME_HEIGHT));
-      // 衝突判定
-      setEnemies((prevEnemies) => {
-        let newEnemies = [...prevEnemies];
-        setBullets((prevBullets) => {
-          let newBullets = [...prevBullets];
-          for (let i = 0; i < prevEnemies.length; i++) {
-            for (let j = 0; j < prevBullets.length; j++) {
-              const e = prevEnemies[i];
-              const b = prevBullets[j];
-              if (
-                b.x < e.x + ENEMY_SIZE &&
-                b.x + BULLET_WIDTH > e.x &&
-                b.y < e.y + ENEMY_SIZE &&
-                b.y + BULLET_HEIGHT > e.y
-              ) {
-                // 衝突
-                newEnemies.splice(i, 1);
-                newBullets.splice(j, 1);
-                setScore((s) => s + 1);
-                return newBullets;
-              }
-            }
+      setEnemies((prevEnemies) => prevEnemies.map(e => ({ ...e, y: e.y + ENEMY_SPEED })).filter(e => e.y < GAME_HEIGHT));
+      // 衝突判定（filter方式）
+      setBullets((prevBullets) => {
+        let hit = false;
+        const newBullets = prevBullets.filter(b => {
+          const hitEnemy = enemies.find(e =>
+            b.x < e.x + ENEMY_SIZE &&
+            b.x + BULLET_WIDTH > e.x &&
+            b.y < e.y + ENEMY_SIZE &&
+            b.y + BULLET_HEIGHT > e.y
+          );
+          if (hitEnemy) {
+            hit = true;
+            return false; // この弾は消す
           }
-          return newBullets;
+          return true;
         });
-        return newEnemies;
+        if (hit) setScore(s => s + 1);
+        return newBullets;
       });
+      setEnemies((prevEnemies) => prevEnemies.filter(e => {
+        const hitBullet = bullets.find(b =>
+          b.x < e.x + ENEMY_SIZE &&
+          b.x + BULLET_WIDTH > e.x &&
+          b.y < e.y + ENEMY_SIZE &&
+          b.y + BULLET_HEIGHT > e.y
+        );
+        return !hitBullet; // 当たった敵は消す
+      }));
       // 敵が下まで来たらゲームオーバー
       setEnemies((prev) => {
         if (prev.some(e => e.y + ENEMY_SIZE >= GAME_HEIGHT - PLAYER_HEIGHT)) {
@@ -103,7 +104,7 @@ export default function Shooting() {
     };
     animationRef.current = requestAnimationFrame(loop);
     return () => animationRef.current && cancelAnimationFrame(animationRef.current);
-  }, [isPlaying]);
+  }, [isPlaying, bullets, enemies]);
 
   // ゲーム開始
   const startGame = () => {
