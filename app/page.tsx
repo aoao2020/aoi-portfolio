@@ -18,6 +18,21 @@ export default function Home() {
                 Skills
               </Link>
             </li>
+            <li>
+              <Link href="/career" className="text-blue-800 hover:text-blue-600 hover:underline font-bold">
+                Career
+              </Link>
+            </li>
+            <li>
+              <Link href="/game" className="text-blue-800 hover:text-blue-600 hover:underline font-bold">
+                Game
+              </Link>
+            </li>
+            <li>
+              <Link href="/shooting" className="text-blue-800 hover:text-blue-600 hover:underline font-bold">
+                Shooting
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
@@ -40,13 +55,29 @@ export default function Home() {
                 </p>
               </div>
 
-              <Link 
-                href="/skills" 
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-xl font-bold hover:from-blue-700 hover:to-cyan-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-              >
-                スキルを見る
-                <span className="ml-2">→</span>
-              </Link>
+              <div className="flex flex-wrap gap-4">
+                <Link 
+                  href="/skills" 
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-xl font-bold hover:from-blue-700 hover:to-cyan-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                >
+                  スキルを見る
+                  <span className="ml-2">→</span>
+                </Link>
+                <Link 
+                  href="/game" 
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-xl font-bold hover:from-cyan-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                >
+                  ゲームで遊ぶ
+                  <span className="ml-2">🎮</span>
+                </Link>
+                <Link 
+                  href="/shooting" 
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-400 to-cyan-400 text-white rounded-xl font-bold hover:from-blue-500 hover:to-cyan-500 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                >
+                  シューティングで遊ぶ
+                  <span className="ml-2">🐾</span>
+                </Link>
+              </div>
 
               <div className="flex flex-wrap gap-3 pt-4">
                 
