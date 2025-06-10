@@ -36,6 +36,29 @@ export default function Career() {
 
           {/* 経歴タイムライン */}
           <div className="space-y-12">
+            {/* 2025年 */}
+            <div className="relative">
+              <div className="absolute left-0 w-24 text-right pr-8">
+                <span className="text-lg font-bold text-blue-800">2025</span>
+              </div>
+              <div className="ml-32 pl-8 border-l-2 border-blue-200">
+                <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-blue-100">
+                  <h3 className="text-xl font-bold text-blue-800 mb-2">就活開始！ゲーム開発に力を入れる</h3>
+                  <p className="text-gray-600 mb-4">
+                    Unityゲーム開発とWebゲーム開発の学習を継続
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-800 rounded-lg text-sm">
+                      Unity
+                    </span>
+                    <span className="px-3 py-1 bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-800 rounded-lg text-sm">
+                      Webゲーム
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* 2024年 */}
             <div className="relative">
               <div className="absolute left-0 w-24 text-right pr-8">
@@ -43,11 +66,14 @@ export default function Career() {
               </div>
               <div className="ml-32 pl-8 border-l-2 border-blue-200">
                 <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-blue-100">
-                  <h3 className="text-xl font-bold text-blue-800 mb-2">フリーランスエンジニア</h3>
+                  <h3 className="text-xl font-bold text-blue-800 mb-2">横浜市立大学 理学部 在学中</h3>
                   <p className="text-gray-600 mb-4">
-                    iOSアプリ開発とゲーム開発を中心に活動
+                    理学部で生物学を学びながら、iOSアプリ開発とゲーム開発の学習を継続
                   </p>
                   <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-800 rounded-lg text-sm">
+                      大学
+                    </span>
                     <span className="px-3 py-1 bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-800 rounded-lg text-sm">
                       iOS開発
                     </span>
@@ -103,7 +129,7 @@ export default function Career() {
               </div>
               <div className="ml-32 pl-8 border-l-2 border-blue-200">
                 <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-blue-100">
-                  <h3 className="text-xl font-bold text-blue-800 mb-2">エンジニアとしてのキャリアスタート</h3>
+                  <h3 className="text-xl font-bold text-blue-800 mb-2">大学受験の合間に息抜きでプログラミング</h3>
                   <p className="text-gray-600 mb-4">
                     モバイルアプリ開発の基礎を学ぶ
                   </p>

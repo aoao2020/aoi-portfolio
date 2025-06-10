@@ -67,14 +67,14 @@ export default function Home() {
                   href="/game" 
                   className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-xl font-bold hover:from-cyan-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                 >
-                  ゲームで遊ぶ
+                  タッピングゲーム
                   <span className="ml-2">🎮</span>
                 </Link>
                 <Link 
                   href="/shooting" 
                   className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-400 to-cyan-400 text-white rounded-xl font-bold hover:from-blue-500 hover:to-cyan-500 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                 >
-                  シューティングで遊ぶ
+                  シューティングゲーム
                   <span className="ml-2">🐾</span>
                 </Link>
               </div>

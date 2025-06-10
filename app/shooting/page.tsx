@@ -89,7 +89,7 @@ export default function Shooting() {
       }));
       // 敵が下まで来たらゲームオーバー
       setEnemies((prev) => {
-        if (prev.some(e => e.y + ENEMY_SIZE >= GAME_HEIGHT - PLAYER_HEIGHT)) {
+        if (prev.some(e => e.y + ENEMY_SIZE >= GAME_HEIGHT)) {
           setIsPlaying(false);
           setGameOver(true);
           return [];

@@ -67,7 +67,7 @@ export default function Sushi() {
               </li>
               <li className="flex items-center space-x-2">
                 <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-                <span>ゲームをクリアするとコインが貯まるシステム（未実装）</span>
+                <span>ゲームをクリアするとコインが貯まるシステム</span>
               </li>
               <li className="flex items-center space-x-2">
                 <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
